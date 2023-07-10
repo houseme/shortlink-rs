@@ -1,0 +1,30 @@
+[workspace]
+members = [
+    "crates/*",
+    "examples/*",
+]
+resolver = "2"
+
+[profile.release]
+opt-level = 3
+
+[workspace.package]
+version = "0.0.1"
+authors = ["https://github.com/houseme/shortlink-rs"]
+edition = "2021"
+rust-version = "1.63"
+license = "MIT OR Apache-2.0"
+description = "A short link service system implemented by rust language"
+homepage = "https://houseme.github.io/shortlink-rs/"
+repository = "https://github.com/houseme/shortlink-rs.git"
+documentation = "https://docs.rs/shortlink-rs/"
+readme = "./README.md"
+keywords = ["shortlink", "link", "web", "http", "api"]
+categories = ["config", "web-programming", "development-tools","Asynchronous","network-programming"]
+
+[workspace.dependencies]
+base64 = "0.21"
+bytes = "1"
+bcrypt = "0.14"
+
+shortlink-core = { path = "./crates/core" }
