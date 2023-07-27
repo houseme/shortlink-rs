@@ -19,9 +19,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
+            ~/.cargo/bin/
             ~/.cargo/registry
             ~/.cargo/git
-            target
+            target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: Install rust
         uses: actions-rs/toolchain@v1
@@ -46,9 +47,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
+            ~/.cargo/bin/
             ~/.cargo/registry
             ~/.cargo/git
-            target
+            target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: Install clippy
         run: rustup component add clippy
@@ -70,9 +72,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
+            ~/.cargo/bin/
             ~/.cargo/registry
             ~/.cargo/git
-            target
+            target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: Install rust
         uses: actions-rs/toolchain@v1
