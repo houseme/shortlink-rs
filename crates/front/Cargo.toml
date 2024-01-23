@@ -15,3 +15,10 @@ categories.workspace = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+chrono.workspace = true
+jieba-rs.workspace = true
+salvo = { workspace = true, features = ["default", "logging"] }
+serde.workspace = true
+tokio = { workspace = true, features = ["full"] }
+tracing.workspace = true
+tracing-subscriber.workspace = true
